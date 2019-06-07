@@ -15,8 +15,8 @@ async function main(){
     secure: false, // true for 465, false for other ports
     auth: {
       type: "login",
-      user: "digital@alpacseguros.com.br", // generated ethereal user
-      pass: "certificadodigital@@" // generated ethereal password
+      user: "mail", // generated ethereal user
+      pass: "PASS" // generated ethereal password
     },
 	tls: {rejectUnauthorized: false}
   });
