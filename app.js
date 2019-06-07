@@ -1,5 +1,7 @@
-"use strict";
+﻿"use strict";
 const nodemailer = require("nodemailer");
+
+let nome = "Mirela Souza"
 
 // async..await is not allowed in global scope, must use a wrapper
 async function main(){
@@ -14,18 +16,17 @@ async function main(){
     port: 587,
     secure: false, // true for 465, false for other ports
     auth: {
-      type: "login",
-      user: "mail", // generated ethereal user
-      pass: "PASS" // generated ethereal password
+      user: "EMAIL", // generated ethereal user
+      pass: "PASSWORD" // generated ethereal password
     },
 	tls: {rejectUnauthorized: false}
   });
 
   // send mail with defined transport object
   let info = await transporter.sendMail({
-    from: '"Fred Foo" <digital@alpacseguros.com.br>', // sender address
-    to: "rfiilho@gmail.com", // list of receivers
-    subject: "Hello ✔", // Subject line
+    from: '"Spotify" <digital@alpacseguros.com.br>', // sender address
+    to: "contato.mirelabsouza@gmail.com", // list of receivers
+    subject: "Hello, "+nome+". Update your payment details.", // Subject line
     text: "Hello world?", // plain text body
     html: "<b>Hello world?</b>" // html body
   });
